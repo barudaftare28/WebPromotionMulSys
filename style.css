@@ -33,6 +33,7 @@ body {
   font-weight: 700;
   color: brown;
   justify-content: center;
+  text-decoration: none;
 }
 
 .navbar-logo span {
