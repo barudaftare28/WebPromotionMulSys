@@ -1,0 +1,372 @@
+:root {
+  --primary: #ff914d;
+  --background: #ffffff;
+  --text: #222222;
+  --accent: #ffe0cc;
+  --hover: #ffa366;
+}
+
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 7%;
+  background-color: bisque;
+  border-bottom: 1px solid grey;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: brown;
+  justify-content: center;
+}
+
+.navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto; /* ini membantu menjaga di tengah */
+  justify-content: center;
+}
+
+.navbar-nav a {
+  color: brown;
+  font-size: 1.3rem;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav a:hover::after {
+  transform: scaleX(0.8);
+}
+
+.hero {
+  padding-top: 7rem;
+  text-align: center;
+  background-color: #fef0e6;
+  padding-bottom: 4rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero video {
+  width: 80%;
+  max-width: 768px;
+  border: 3px solid var(--primary);
+  border-radius: 10px;
+}
+
+.sinopsis {
+  padding: 2rem 7% 3rem;
+  text-align: center;
+  background-color: white;
+}
+.sinopsis h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sinopsis img {
+  width: 300px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.sinopsis .info h3 {
+  margin: 0.2rem 0;
+}
+
+.sinopsis-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* ini membuat konten sejajar vertikal */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.sinopsis-container img {
+  width: 340px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-film {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-film h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.info-film h3 span {
+  font-weight: normal;
+  color: #444;
+}
+
+.info-film .cta {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.info-film .cta:hover {
+  background-color: #ff9000;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--background) 0.3s ease;
+}
+
+.cta:hover {
+  background-color: var(--hover);
+}
+
+.pemeran {
+  padding: 4rem 7%;
+  background-color: #fef0e6;
+  text-align: center;
+}
+
+.pemeran h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem;
+  /* margin-top: 2rem; */
+  align-items: stretch; /* Samakan tinggi */
+}
+
+.cast-card {
+  width: 180px; /* Lebar kecil agar tidak kebesaran */
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px; /* Cukup untuk nama panjang */
+}
+.cast-card h3 {
+  margin: 0.6rem; /* Lebih rapat antar nama dan NIM */
+  /* font-size: 0.9rem; */
+  /* font-weight: normal; */
+}
+.cast-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.dokumentasi {
+  padding: 4rem 7%;
+  text-align: center;
+  background-color: white;
+}
+
+.dokumentasi h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dokumentasi video {
+  width: 80%;
+  max-width: 768px;
+  border-radius: 10px;
+  border: 3px solid var(--accent);
+}
+
+footer {
+  background-color: #fef0e6;
+  color: #444;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  /* margin-top: 3rem; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+/* .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; pastikan semua isi rata kiri 
+  justify-content: flex-start; agar tidak ke tengah secara vertikal 
+}  
+*/
+
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  align-items: start; /* Ini memastikan semua kolom sejajar atas */
+}
+
+.footer-logo img {
+  max-width: 80px; /* Pastikan tidak terlalu besar */
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p {
+  line-height: 1.4;
+}
+
+.footer-info,
+.footer-links,
+.footer-social {
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li a {
+  color: #444;
+  text-decoration: none;
+  display: block;
+  margin: 0.3rem 0;
+}
+
+.footer-links li a:hover {
+  color: #000;
+}
+
+.footer-social .icons a img {
+  width: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social .icons a:hover img {
+  transform: scale(1.1);
+}
+.footer-links a,
+.footer-social .icons a {
+  text-decoration: none;
+  color: inherit; /* atau ganti dengan warna yang diinginkan */
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  background-color: #ffffff;
+}
+
+/* Transisi umum */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animasi masuk dari bawah */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Terapkan animasi pada section saat muncul */
+.hero,
+.sinopsis,
+.pemeran,
+.dokumentasi {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Tambah delay agar masuk bertahap */
+.pemeran {
+  animation-delay: 0.4s;
+}
+
+.dokumentasi {
+  animation-delay: 0.6s;
+}
+
+/* Tombol dengan efek melayang */
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 145, 77, 0.4);
+}
+
+/* Kartu cast hover */
+.cast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
