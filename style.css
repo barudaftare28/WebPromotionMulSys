@@ -155,11 +155,12 @@ body {
 
 .sinopsis-container img {
   width: auto;
-  height: 700px; /* Ini untuk desktop/layar besar */
+  height: 630px; /* Ini untuk desktop/layar besar */
   border-radius: 10px;
-  max-width: 90%; /* Ini penting untuk responsivitas lebar */
+  max-width: 100%; /* Ini penting untuk responsivitas lebar */
   object-fit: contain; /* Ini juga penting */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .info-film {
