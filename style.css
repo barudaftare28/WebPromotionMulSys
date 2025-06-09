@@ -75,7 +75,7 @@ body {
 .hero {
   padding-top: 7rem;
   text-align: center;
-  background-color: #fef0e6;
+  background-color: white;
   padding-bottom: 4rem;
 }
 
@@ -111,16 +111,16 @@ body {
 .sinopsis {
   padding: 2rem 7% 3rem;
   text-align: center;
-  background-color: white;
+  background-color: #fef0e6;
 }
-.sinopsis h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.sinopsis h2 {
+  background-color: white;
 }
 
 .sinopsis p {
   font-weight: normal;
   font-size: 16pt;
+  background-color: white;
 }
 
 .sinopsis .info span {
@@ -134,7 +134,7 @@ body {
 }
 
 .sinopsis img {
-  width: 800px;
+  width: fit-content;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -153,9 +153,10 @@ body {
 }
 
 .sinopsis-container img {
-  width: 340px;
-  height: auto;
+  width: auto;
+  height: 600px;
   border-radius: 10px;
+   max-width: 90%; /* Pastikan tidak melebihi lebar container di layar kecil */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -209,7 +210,7 @@ body {
 
 .pemeran {
   padding: 4rem 7%;
-  background-color: #fef0e6;
+  background-color: white;
   text-align: center;
 }
 
@@ -230,7 +231,7 @@ body {
 .cast-card {
   width: 180px; /* Lebar kecil agar tidak kebesaran */
   padding: 1rem;
-  background-color: #fff;
+  background-color: #fef0e6;
   border: 1px solid #ddd;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -254,7 +255,7 @@ body {
 .dokumentasi {
   padding: 4rem 7%;
   text-align: center;
-  background-color: white;
+  background-color: #fef0e6;
 }
 
 .dokumentasi h1 {
@@ -270,21 +271,21 @@ body {
 }
 
 footer {
-  background-color: #fef0e6;
+  background-color: white;
   color: #444;
   padding: 2rem 1rem;
   font-size: 0.9rem;
   /* margin-top: 3rem; */
   /* justify-content: center;
-  align-items: center; */
+	align-items: center; */
 }
 
 /* .footer-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; pastikan semua isi rata kiri 
-  justify-content: flex-start; agar tidak ke tengah secara vertikal 
-}  
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; pastikan semua isi rata kiri
+	justify-content: flex-start; agar tidak ke tengah secara vertikal
+}
 */
 
 .footer-content {
@@ -350,7 +351,7 @@ footer {
   border-top: 1px solid #ccc;
   padding-top: 1rem;
   font-size: 0.8rem;
-  background-color: #ffffff;
+  background-color: #fef0e6;
 }
 
 /* Transisi umum */
@@ -400,4 +401,86 @@ footer {
 .cast-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* MEDIA QUERIES UNTUK TAMPILAN RESPONSIVE */
+
+/* Hamburger menu - Sembunyikan secara default di desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: brown;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Tampilan untuk layar <= 768px (misalnya tablet dan ponsel) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Ubah layout navbar menjadi kolom */
+    align-items: flex-start; /* Rata kiri elemen di navbar */
+    padding: 0.7rem 5%; /* Sesuaikan padding */
+  }
+
+  .navbar-logo {
+    margin-bottom: 0.5rem; /* Tambahkan sedikit jarak di bawah logo */
+  }
+
+  /* Tampilkan hamburger menu di ukuran ini */
+  .hamburger {
+    display: flex;
+    position: absolute; /* Posisikan hamburger secara absolut */
+    right: 7%; /* Geser ke kanan */
+    top: 18px; /* Sesuaikan posisi vertikal */
+    z-index: 1001; /* Pastikan di atas navbar-nav */
+  }
+
+  /* Sembunyikan navbar-nav secara default di tampilan mobile */
+  .navbar-nav {
+    display: none;
+    flex-direction: column; /* Ubah tata letak tautan menjadi kolom */
+    width: 100%; /* Lebarkan penuh */
+    position: absolute; /* Posisikan absolut di bawah navbar */
+    top: 65px; /* Sesuaikan agar muncul di bawah navbar utama */
+    left: 0; /* Mulai dari kiri layar */
+    background-color: bisque; /* Latar belakang menu yang terbuka */
+    padding: 1rem 5%; /* Padding untuk item menu */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    border-radius: 0 0 8px 8px; /* Sudut membulat di bawah */
+    z-index: 998; /* Di bawah navbar utama, tapi di atas konten lain */
+    text-align: center; /* Rata tengah teks tautan */
+  }
+
+  /* Tampilkan navbar-nav saat kelas 'active' ditambahkan oleh JavaScript */
+  .navbar-nav.active {
+    display: flex;
+  }
+
+  .navbar-nav a {
+    font-size: 1rem;
+    margin: 0.5rem 0; /* Spasi antar tautan menu */
+  }
+
+  .navbar-nav a::after {
+    /* Atur ulang gaya garis bawah jika diperlukan untuk mobile */
+    padding-bottom: 0.2rem;
+    border-bottom: 0.1rem solid var(--primary);
+  }
+}
+
+/* Tampilan untuk layar ekstra kecil (misalnya ponsel) */
+@media (max-width: 480px) {
+  .navbar-logo {
+    font-size: 1.3rem;
+  }
+
+  .navbar-nav a {
+    font-size: 0.9rem;
+  }
 }
