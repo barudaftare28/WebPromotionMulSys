@@ -160,7 +160,6 @@ body {
   max-width: 100%; /* Ini penting untuk responsivitas lebar */
   object-fit: contain; /* Ini juga penting */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  background-color: white;
 }
 
 .info-film {
@@ -485,5 +484,14 @@ footer {
 
   .navbar-nav a {
     font-size: 0.9rem;
+  }
+
+  .sinopsis-container img {
+    width: auto;
+    height: 450px; /* Ini untuk desktop/layar besar */
+    border-radius: 10px;
+    max-width: 100%; /* Ini penting untuk responsivitas lebar */
+    object-fit: contain; /* Ini juga penting */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 }
