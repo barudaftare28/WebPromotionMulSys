@@ -95,7 +95,7 @@ body {
 
 .hero iframe {
   width: 100%;
-  max-width: 960px; /* 960px width */
+  max-width: 800px; /* 960px width */
   aspect-ratio: 16 / 9; /* otomatis atur tinggi agar pas */
   margin: auto;
   border-radius: 10px;
@@ -275,7 +275,7 @@ body {
 
 .dokumentasi iframe {
   width: 100%;
-  max-width: 960px; /* 960px width */
+  max-width: 800px; /* 960px width */
   aspect-ratio: 16 / 9; /* otomatis atur tinggi agar pas */
   margin: auto;
   border-radius: 10px;
